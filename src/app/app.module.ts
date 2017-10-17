@@ -4,10 +4,19 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { PaymentComponent } from './payment/payment.component';
-import { TransferComponent } from './transfer/transfer.component';
-import { BankStatementComponent } from './bank-statement/bank-statement.component';
+import { ExternalUserComponent } from './external-user/external-user.component';
+import { InternalUserComponent } from './internal-user/internal-user.component';
+import { StatementComponent } from './external-user/statement/statement.component';
+import { AccountComponent } from './external-user/account/account.component';
+import { RequestsComponent } from './external-user/requests/requests.component';
+import { AuthorizeComponent } from './internal-user/authorize/authorize.component';
+import { AccountsComponent } from './internal-user/accounts/accounts.component';
+import { LogFileComponent } from './internal-user/log-file/log-file.component';
+import { UserProfileComponent } from './internal-user/user-profile/user-profile.component';
+import {DashboardComponent} from './external-user/dashboard/dashboard.component';
+import {PaymentComponent} from './external-user/payment/payment.component';
+import {TransferComponent} from './external-user/transfer/transfer.component';
+import {ProfileComponent} from './external-user/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +25,16 @@ import { BankStatementComponent } from './bank-statement/bank-statement.componen
     DashboardComponent,
     PaymentComponent,
     TransferComponent,
-    BankStatementComponent
+    ExternalUserComponent,
+    InternalUserComponent,
+    StatementComponent,
+    AccountComponent,
+    RequestsComponent,
+    AuthorizeComponent,
+    ProfileComponent,
+    AccountsComponent,
+    LogFileComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,

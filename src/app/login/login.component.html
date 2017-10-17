@@ -1,3 +1,25 @@
-<p>
-  login works!
-</p>
+<div class="container login-cont">
+  <div class="row">
+    <div class="col-xs-12" class="login-form">
+      <h2 class="details">Enter Credentials</h2>
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          ngModel
+          name="email"
+          required
+          email>
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          ngModel
+          name="password"
+          required>
+        <button class="btn btn-primary" type="submit"><strong>Submit</strong></button>
+      </form>
+    </div>
+  </div>
+</div>

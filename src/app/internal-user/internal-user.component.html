@@ -1,0 +1,30 @@
+<div class="container content">
+  <div class="row">
+    <div class="col-xs-3 col-lg-3 col-md-3">
+      <div class="navbar navbar-fixed-left">
+        <p style="font-size: 600%" class="bank">G6</p>
+        <p style="font-size: 500%" class="bank">Bank</p>
+        <ul class="nav navbar-nav">
+          <li role="presentation" [ngClass]="{'active': router.url.includes('/user-profile')}" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <a [routerLink]="['/user-profile']" (click)="tabsClick('user-profile')">User Profile</a>
+          </li>
+          <li role="presentation" [ngClass]="{'active': router.url.includes('/accounts')}" routerLinkActive="active">
+            <a [routerLink]="['/accounts']" (click)="tabsClick('accounts')">Account</a>
+          </li>
+          <li role="presentation" [ngClass]="{'active': router.url.includes('/authorize')}" routerLinkActive="active">
+            <a [routerLink]="['/authorize']" (click)="tabsClick('authorize')">Authorization Requests</a>
+          </li>
+          <li role="presentation" [ngClass]="{'active': router.url.includes('/log-file')}" routerLinkActive="active">
+            <a [routerLink]="['/log-file']" (click)="tabsClick('log-file')">Log File</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-xs-9 col-lg-9 col-md-9 tab-data">
+      <app-accounts *ngIf="toDisplay === 'accounts'"></app-accounts>
+      <app-authorize *ngIf="toDisplay === 'authorize'"></app-authorize>
+      <app-log-file *ngIf="toDisplay === 'log-file'"></app-log-file>
+      <app-user-profile *ngIf="toDisplay === 'user-profile'"></app-user-profile>
+    </div>
+  </div>
+</div>
