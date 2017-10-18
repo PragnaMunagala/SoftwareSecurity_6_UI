@@ -88,17 +88,13 @@
     <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-3 col-sm-6">
-            <app-dashboard *ngIf="toDisplay === 'dashboard'"></app-dashboard>
-            <app-account *ngIf="toDisplay === 'account'"></app-account>
-            <app-payment *ngIf="toDisplay === 'payment'"></app-payment>
-            <app-profile *ngIf="toDisplay === 'profile'"></app-profile>
-            <app-requests *ngIf="toDisplay === 'requests'"></app-requests>
-            <app-statement *ngIf="toDisplay === 'statement'"></app-statement>
-            <app-transfer *ngIf="toDisplay === 'transfer'"></app-transfer>
-          </div>
-        </div>
+        <app-dashboard *ngIf="toDisplay === 'dashboard'"></app-dashboard>
+        <app-account *ngIf="toDisplay === 'account'"></app-account>
+        <app-payment *ngIf="toDisplay === 'payment'"></app-payment>
+        <app-profile *ngIf="toDisplay === 'profile'"></app-profile>
+        <app-requests *ngIf="toDisplay === 'requests'"></app-requests>
+        <app-statement *ngIf="toDisplay === 'statement'"></app-statement>
+        <app-transfer *ngIf="toDisplay === 'transfer'"></app-transfer>
       </div>
     </div>
     <!-- End of Main content -->
