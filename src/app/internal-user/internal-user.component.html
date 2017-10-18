@@ -1,3 +1,109 @@
+
+
+<div class="wrapper">
+
+    <!-- Sidebar starts -->
+    <div class="sidebar" data-background-color="white" data-active-color="danger">
+
+      <div class="sidebar-wrapper">
+        <div class="logo">
+            <a>
+                G6 Bank
+            </a>
+        </div>
+
+        <ul class="nav">
+          <li role="presentation" [ngClass]="{'active': router.url.includes('/user-profile')}" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <a [routerLink]="['/user-profile']" (click)="tabsClick('user-profile')">User Profile</a>
+          </li>
+
+          <li role="presentation" [ngClass]="{'active': router.url.includes('/accounts')}" routerLinkActive="active">
+            <a [routerLink]="['/accounts']" (click)="tabsClick('accounts')">Account</a>
+          </li>
+
+          <li role="presentation" [ngClass]="{'active': router.url.includes('/authorize')}" routerLinkActive="active">
+            <a [routerLink]="['/authorize']" (click)="tabsClick('authorize')">Authorization Requests</a>
+          </li>
+
+          <li role="presentation" [ngClass]="{'active': router.url.includes('/log-file')}" routerLinkActive="active">
+            <a [routerLink]="['/log-file']" (click)="tabsClick('log-file')">Log File</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+    <!-- Sidebar ends -->
+
+    <!-- Page Content starts -->
+    <div class="main-panel">
+      <!-- Top Navbar starts -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar bar1"></span>
+                  <span class="icon-bar bar2"></span>
+                  <span class="icon-bar bar3"></span>
+              </button>
+              <p class="navbar-brand">Welcome, "Name"!</p>
+          </div>
+
+          <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-right">
+
+                  <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                          <i class="ti-bell"></i>
+                          <p class="notification">"Count of notifications"</p>
+        									<p>Notifications</p>
+        									<b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Notification 1</a></li>
+                          <li><a href="#">Notification 2</a></li>
+                          <li><a href="#">Notification 3</a></li>
+                          <li><a href="#">Notification 4</a></li>
+                          <li><a href="#">Another notification</a></li> <!-- Do we want to keep this as a dropdown? -->
+                        </ul>
+                  </li>
+                  <li>
+                    <a href="#">
+      								<i class="ti-settings"></i> <!-- Change the icon -->
+      								<p>Logout</p>
+                    </a>
+                  </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Top Navbar ends -->
+
+      <!-- Main content -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-3 col-sm-6">
+            <app-accounts *ngIf="toDisplay === 'accounts'"></app-accounts>
+            <app-authorize *ngIf="toDisplay === 'authorize'"></app-authorize>
+            <app-log-file *ngIf="toDisplay === 'log-file'"></app-log-file>
+            <app-user-profile *ngIf="toDisplay === 'user-profile'"></app-user-profile>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- End of Main content -->
+    </div>
+    <!-- End of Page Content -->
+</div>
+<!--End of Main content -->
+
+
+
+
+<!--
+
+
 <div class="container content">
   <div class="row">
     <div class="col-xs-3 col-lg-3 col-md-3">
@@ -27,4 +133,4 @@
       <app-user-profile *ngIf="toDisplay === 'user-profile'"></app-user-profile>
     </div>
   </div>
-</div>
+</div> -->
