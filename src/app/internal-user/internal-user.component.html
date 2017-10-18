@@ -82,14 +82,10 @@
       <!-- Main content -->
       <div class="content">
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-3 col-sm-6">
-            <app-accounts *ngIf="toDisplay === 'accounts'"></app-accounts>
-            <app-authorize *ngIf="toDisplay === 'authorize'"></app-authorize>
-            <app-log-file *ngIf="toDisplay === 'log-file'"></app-log-file>
-            <app-user-profile *ngIf="toDisplay === 'user-profile'"></app-user-profile>
-          </div>
-          </div>
+          <app-accounts *ngIf="toDisplay === 'accounts'"></app-accounts>
+          <app-authorize *ngIf="toDisplay === 'authorize'"></app-authorize>
+          <app-log-file *ngIf="toDisplay === 'log-file'"></app-log-file>
+          <app-user-profile *ngIf="toDisplay === 'user-profile'"></app-user-profile>
         </div>
       </div>
       <!-- End of Main content -->
