@@ -10,7 +10,8 @@ import { StatementComponent } from './external-user/statement/statement.componen
 import { AccountComponent } from './external-user/account/account.component';
 import { RequestsComponent } from './external-user/requests/requests.component';
 import { AuthorizeComponent } from './internal-user/authorize/authorize.component';
-import { AccountsComponent } from './internal-user/accounts/accounts.component';
+import { CreateAccountComponent } from './internal-user/create-account/create-account.component';
+import { ViewAccountsComponent } from './internal-user/view-accounts/view-accounts.component';
 import { LogFileComponent } from './internal-user/log-file/log-file.component';
 import { UserProfileComponent } from './internal-user/user-profile/user-profile.component';
 import {DashboardComponent} from './external-user/dashboard/dashboard.component';
@@ -32,7 +33,8 @@ import {ProfileComponent} from './external-user/profile/profile.component';
     RequestsComponent,
     AuthorizeComponent,
     ProfileComponent,
-    AccountsComponent,
+    ViewAccountsComponent,
+    CreateAccountComponent,
     LogFileComponent,
     UserProfileComponent,
   ],

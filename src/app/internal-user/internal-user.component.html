@@ -17,8 +17,12 @@
             <a [routerLink]="['/user-profile']" (click)="tabsClick('user-profile')">User Profile</a>
           </li>
 
-          <li role="presentation" [ngClass]="{'active': router.url.includes('/accounts')}" routerLinkActive="active">
-            <a [routerLink]="['/accounts']" (click)="tabsClick('accounts')">Account</a>
+          <li role="presentation" [ngClass]="{'active': router.url.includes('/create-account')}" routerLinkActive="active">
+            <a [routerLink]="['/create-account']" (click)="tabsClick('create-account')">Create Accounts</a>
+          </li>
+
+          <li role="presentation" [ngClass]="{'active': router.url.includes('/view-accounts')}" routerLinkActive="active">
+            <a [routerLink]="['/view-accounts']" (click)="tabsClick('view-accounts')">View Accounts</a>
           </li>
 
           <li role="presentation" [ngClass]="{'active': router.url.includes('/authorize')}" routerLinkActive="active">
@@ -82,7 +86,8 @@
       <!-- Main content -->
       <div class="content">
         <div class="container-fluid">
-          <app-accounts *ngIf="toDisplay === 'accounts'"></app-accounts>
+          <app-create-account *ngIf="toDisplay === 'create-account'"></app-create-account>
+          <app-view-accounts *ngIf="toDisplay === 'view-accounts'"></app-view-accounts>
           <app-authorize *ngIf="toDisplay === 'authorize'"></app-authorize>
           <app-log-file *ngIf="toDisplay === 'log-file'"></app-log-file>
           <app-user-profile *ngIf="toDisplay === 'user-profile'"></app-user-profile>

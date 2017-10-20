@@ -18,8 +18,10 @@ export class InternalUserComponent implements OnInit {
         (params: Params) => {
           if (this.router.url.includes('/user-profile')) {
             this.toDisplay = 'user-profile';
-          } else if (this.router.url.includes('/accounts')) {
-            this.toDisplay = 'accounts';
+          } else if (this.router.url.includes('/view-accounts')) {
+            this.toDisplay = 'view-accounts';
+          } else if (this.router.url.includes('/create-account')) {
+              this.toDisplay = 'create-account';
           } else if (this.router.url.includes('/authorize')) {
             this.toDisplay = 'authorize';
           } else if (this.router.url.includes('/log-file')) {
