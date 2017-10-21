@@ -1,3 +1,86 @@
-<p>
-  payment works!
-</p>
+<div class="row">
+  <div class="col-lg-12 col-md-12">
+    <div class="card">
+      <div class="header">
+        <h4 class="title">Pay Bills</h4>
+      </div>
+      <div class="content">
+        <p class="category">Pay Using Credit Card</p>
+        <form ngNativeValidate>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Card Number</label>
+                <input type="text" class="form-control border-input" placeholder="xxxx-xxxx-xx" value="" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Card Holder Name</label>
+                <input type="text" class="form-control border-input" placeholder="" value="" required>
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Expiry Date</label>
+                <input type="text" class="form-control border-input" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" placeholder="mm/dd/yyyy" value="" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>CVV</label>
+                <input type="text" class="form-control border-input" pattern="" placeholder="xxx" value="" required>
+              </div>
+            </div>
+          </div>
+        </form>
+        <p class="category">Pay Using Bank Account</p>
+        <form ngNativeValidate>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Account Number</label>
+                <input type="text" class="form-control border-input" placeholder="xxxx-xxxx-xx" value="" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Routing Number</label>
+                <input type="text" class="form-control border-input" placeholder="" value="" required>
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Confirm Account Number</label>
+                <input type="text" class="form-control border-input" placeholder="xxxx-xxxx-xx" value="" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Account Nickname</label>
+                <input type="text" class="form-control border-input" pattern="" placeholder="" value="" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Account Type</label>
+                <select>
+                  <option>Checking</option>
+                  <option>Savings</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
