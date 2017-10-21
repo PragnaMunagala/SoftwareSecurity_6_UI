@@ -3,34 +3,34 @@
 <div class="wrapper">
 
     <!-- Sidebar starts -->
-    <div class="sidebar" data-background-color="white" data-active-color="danger">
+    <div class="sidebar" data-background-color="white" data-active-color="info">
 
       <div class="sidebar-wrapper">
         <div class="logo">
-            <a>
+            <a class="simple-text logo-normal">
                 G6 Bank
             </a>
         </div>
 
         <ul class="nav">
           <li role="presentation" [ngClass]="{'active': router.url.includes('/user-profile')}" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-            <a [routerLink]="['/user-profile']" (click)="tabsClick('user-profile')">User Profile</a>
+            <a [routerLink]="['/user-profile']" (click)="tabsClick('user-profile')"><p>User Profile</p></a>
           </li>
 
           <li role="presentation" [ngClass]="{'active': router.url.includes('/create-account')}" routerLinkActive="active">
-            <a [routerLink]="['/create-account']" (click)="tabsClick('create-account')">Create Accounts</a>
+            <a [routerLink]="['/create-account']" (click)="tabsClick('create-account')"><p>Create Accounts</p></a>
           </li>
 
           <li role="presentation" [ngClass]="{'active': router.url.includes('/view-accounts')}" routerLinkActive="active">
-            <a [routerLink]="['/view-accounts']" (click)="tabsClick('view-accounts')">View Accounts</a>
+            <a [routerLink]="['/view-accounts']" (click)="tabsClick('view-accounts')"><p>View Accounts</p></a>
           </li>
 
           <li role="presentation" [ngClass]="{'active': router.url.includes('/authorize')}" routerLinkActive="active">
-            <a [routerLink]="['/authorize']" (click)="tabsClick('authorize')">Authorization Requests</a>
+            <a [routerLink]="['/authorize']" (click)="tabsClick('authorize')"><p>Authorization Requests</p></a>
           </li>
 
           <li role="presentation" [ngClass]="{'active': router.url.includes('/log-file')}" routerLinkActive="active">
-            <a [routerLink]="['/log-file']" (click)="tabsClick('log-file')">Log File</a>
+            <a [routerLink]="['/log-file']" (click)="tabsClick('log-file')"><p>Log File</p></a>
           </li>
         </ul>
 
@@ -102,36 +102,28 @@
 
 
 
-<!--
-
-
-<div class="container content">
-  <div class="row">
-    <div class="col-xs-3 col-lg-3 col-md-3">
-      <div class="navbar navbar-fixed-left">
-        <p style="font-size: 600%" class="bank">G6</p>
-        <p style="font-size: 500%" class="bank">Bank</p>
-        <ul class="nav navbar-nav">
-          <li role="presentation" [ngClass]="{'active': router.url.includes('/user-profile')}" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-            <a [routerLink]="['/user-profile']" (click)="tabsClick('user-profile')">User Profile</a>
-          </li>
-          <li role="presentation" [ngClass]="{'active': router.url.includes('/accounts')}" routerLinkActive="active">
-            <a [routerLink]="['/accounts']" (click)="tabsClick('accounts')">Account</a>
-          </li>
-          <li role="presentation" [ngClass]="{'active': router.url.includes('/authorize')}" routerLinkActive="active">
-            <a [routerLink]="['/authorize']" (click)="tabsClick('authorize')">Authorization Requests</a>
-          </li>
-          <li role="presentation" [ngClass]="{'active': router.url.includes('/log-file')}" routerLinkActive="active">
-            <a [routerLink]="['/log-file']" (click)="tabsClick('log-file')">Log File</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="col-xs-9 col-lg-9 col-md-9 tab-data">
-      <app-accounts *ngIf="toDisplay === 'accounts'"></app-accounts>
-      <app-authorize *ngIf="toDisplay === 'authorize'"></app-authorize>
-      <app-log-file *ngIf="toDisplay === 'log-file'"></app-log-file>
-      <app-user-profile *ngIf="toDisplay === 'user-profile'"></app-user-profile>
-    </div>
+<!-- Useful code for the future
+<li>
+  <a data-toggle="collapse" href="#dashboardOverview">
+    <i class="ti-panel"></i>
+    <p>Dashboard
+      <b class="caret"></b>
+    </p>
+  </a>
+  <div class="collapse" id="dashboardOverview">
+    <ul class="nav">
+      <li>
+        <a [routerLink]="['/user-profile']" (click)="tabsClick('user-profile')">
+          <span class="sidebar-mini">O</span>
+          <span class="sidebar-normal">Overview</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/user-profile']" (click)="tabsClick('user-profile')">
+          <span class="sidebar-mini">S</span>
+          <span class="sidebar-normal">Stats</span>
+        </a>
+      </li>
+    </ul>
   </div>
-</div> -->
+</li> -->
