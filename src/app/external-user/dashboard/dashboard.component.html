@@ -1,3 +1,52 @@
-<p>
-  dashboard works!
-</p>
+<div class="row">
+  <div class="col-lg-3 col-sm-6">
+    <div class="card">
+      <div class="content">
+        <div class="row">
+          <div class="col-xs-5">
+            <div class="icon-big icon-success text-center">
+              <i class="ti-wallet"></i>
+            </div>
+          </div>
+          <div class="col-xs-7">
+            <div class="numbers">
+              <p>Balance</p>
+              $1,345
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <hr />
+          <div class="stats">
+            <i class="ti-calendar"></i> Last day
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="header">
+        <h4 class="title">Transactions</h4>
+        <p class="category">Latest 10 transactions</p>
+      </div>
+      <div class="content table-responsive table-full-width">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th *ngFor="let cell of headerData">{{ cell }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let row of tableData">
+            <td *ngFor="let cell of row">{{cell}}</td>
+          </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>

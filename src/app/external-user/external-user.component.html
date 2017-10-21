@@ -14,25 +14,25 @@
 
       <ul class="nav">
         <li role="presentation" [ngClass]="{'active': router.url.includes('/dashboard')}" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-          <a [routerLink]="['/dashboard']" (click)="tabsClick('dashboard')">Dashboard</a>
+          <a [routerLink]="['/dashboard']" (click)="tabsClick('dashboard')"><p>Dashboard</p></a>
         </li>
         <li role="presentation" [ngClass]="{'active': router.url.includes('/account')}" routerLinkActive="active">
-          <a [routerLink]="['/account']" (click)="tabsClick('account')">Account</a>
+          <a [routerLink]="['/account']" (click)="tabsClick('account')"><p>Account</p></a>
         </li>
         <li role="presentation" [ngClass]="{'active': router.url.includes('/profile')}" routerLinkActive="active">
-          <a [routerLink]="['/profile']" (click)="tabsClick('profile')">User Profile</a>
+          <a [routerLink]="['/profile']" (click)="tabsClick('profile')"><p>User Profile</p></a>
         </li>
         <li role="presentation" [ngClass]="{'active': router.url.includes('/transfer')}" routerLinkActive="active">
-          <a [routerLink]="['/transfer']" (click)="tabsClick('transfer')">Transfer Funds</a>
+          <a [routerLink]="['/transfer']" (click)="tabsClick('transfer')"><p>Transfer Funds</p></a>
         </li>
         <li role="presentation" [ngClass]="{'active': router.url.includes('/payment')}" routerLinkActive="active">
-          <a [routerLink]="['/payment']" (click)="tabsClick('payment')">Payment</a>
+          <a [routerLink]="['/payment']" (click)="tabsClick('payment')"><p>Payment</p></a>
         </li>
         <li role="presentation" [ngClass]="{'active': router.url.includes('/requests')}" routerLinkActive="active">
-          <a [routerLink]="['/requests']" (click)="tabsClick('requests')">Requests</a>
+          <a [routerLink]="['/requests']" (click)="tabsClick('requests')"><p>Requests</p></a>
         </li>
         <li role="presentation" [ngClass]="{'active': router.url.includes('/statement')}" routerLinkActive="active">
-          <a [routerLink]="['/statement']" (click)="tabsClick('statement')">Bank Statement</a>
+          <a [routerLink]="['/statement']" (click)="tabsClick('statement')"><p>Bank Statement</p></a>
         </li>
       </ul>
 
