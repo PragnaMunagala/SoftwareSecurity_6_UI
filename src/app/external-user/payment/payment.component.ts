@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit {
-
+  credit = true;
   constructor() { }
 
   ngOnInit() {
   }
 
+  Payments(type) {
+    if (type === 'credit') {
+      this.credit = true;
+    } else if (type === 'id') {
+      this.credit = false;
+    }
+  }
 }

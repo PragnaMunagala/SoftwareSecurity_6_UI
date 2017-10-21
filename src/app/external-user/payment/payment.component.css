@@ -1,0 +1,18 @@
+.payments li {
+  float: left;
+  padding: 10px 10px 10px 0px;
+  margin-right: 2%;
+}
+
+.payments li p {
+  cursor: pointer;
+  color: #66615B;
+}
+
+.payments li p:hover {
+  color: black;
+}
+
+.payments .active p,  .payments .active p:hover{
+  color: #EB5E28;
+}
